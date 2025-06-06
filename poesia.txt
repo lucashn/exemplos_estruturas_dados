@@ -1,0 +1,14 @@
+No meio do código tinha um bug
+Tinha um bug no meio do código
+
+IndentationError dizia o interpretador
+Difícil a dor do iniciante
+
+Sem saída, perguntou ao colega
+Prontamente, o espaço arrumou
+
+Mas que surpresa, ao ver no terminal
+NameError apareceu
+
+Um erro banal
+Trocou nome por none
