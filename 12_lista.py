@@ -58,6 +58,28 @@ class Lista:
             atual = atual.prox
         
         return atual.valor
+    
+    def buscar(self, alvo):
+        atual = self.head
+
+        while atual != None:
+            if atual.valor == alvo:
+                return True
+            
+            atual = atual.prox
+        
+        return False
+    
+    def remover(self, i):
+        if i == 0: # remover a cabeça
+            self.head = self.head.prox
+        else:
+            atual = self.head
+
+            for _ in range(i-1):
+                atual = atual.prox
+            
+            atual.prox = atual.prox.prox
 
 numeros = Lista()
 numeros.inserir_fim(5)
@@ -72,5 +94,12 @@ assert numeros.recuperar(2) == 13
 numeros.imprimir()
 numeros.inserir(i=3, valor=100)
 numeros.imprimir()
+
+numeros.remover(0)
+numeros.remover(2)
+numeros.imprimir()
+
+print(numeros.buscar(10))
+print(numeros.buscar(80))
 
 print("Tudo ok")
